@@ -1,0 +1,14 @@
+{
+	"required": true,
+	"package": "net.cc.bypass.client.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"ClientCommandsServerMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}
