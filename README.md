@@ -10,7 +10,7 @@ This mod uses a Mixin to overwrite that method with a no-op, so the check always
 
 ## Usage
 
-1. Install [Fabric Loader](https://fabricmc.net/use/) and [Fabric API](https://modrinth.com/mod/fabric-api).
+1. Install [Fabric Loader](https://fabricmc.net/use/).
 2. Place both **clientcommands** and **this mod** in your `mods` folder.
 3. Launch the game — restricted commands now work on any server.
 
@@ -20,7 +20,6 @@ No configuration, no commands, no server-side changes.
 
 - Minecraft 26.2
 - Fabric Loader ≥0.19.3
-- Fabric API
 - clientcommands ≥2.15
 
 ## Build from source
