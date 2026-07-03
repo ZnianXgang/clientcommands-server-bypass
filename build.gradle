@@ -41,7 +41,7 @@ dependencies {
 	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 
 	// Clientcommands — we mixin into it to bypass the server opt-in check
-	modImplementation "maven.modrinth:7Coz83fv:JNP7M5yW"
+	implementation "maven.modrinth:7Coz83fv:JNP7M5yW"
 }
 
 processResources {
