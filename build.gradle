@@ -7,9 +7,17 @@ version = project.mod_version
 group = project.maven_group
 
 repositories {
-	// Local libs directory for clientcommands jar
-	flatDir {
-		dirs 'libs'
+	// For clientcommands dependency via Modrinth
+	exclusiveContent {
+		forRepository {
+			maven {
+				name = "Modrinth"
+				url = "https://api.modrinth.com/maven"
+			}
+		}
+		filter {
+			includeGroup "maven.modrinth"
+		}
 	}
 }
 
@@ -33,7 +41,7 @@ dependencies {
 	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 
 	// Clientcommands — we mixin into it to bypass the server opt-in check
-	implementation fileTree(dir: 'libs', include: '*.jar')
+	modImplementation "maven.modrinth:7Coz83fv:JNP7M5yW"
 }
 
 processResources {
@@ -81,6 +89,6 @@ publishing {
 		// Add repositories to publish to here.
 		// Notice: This block does NOT have the same function as the block in the top level.
 		// The repositories here will be used for publishing your artifact, not for
-		// retrieving dependencies.
+		// distributing your mod.
 	}
 }
