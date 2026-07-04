@@ -2,15 +2,17 @@
 	"schemaVersion": 1,
 	"id": "clientcommands-server-bypass",
 	"version": "${version}",
-	"name": "Clientcommands Server Bypass",
+	"name": "Client Commands Server Bypass",
 	"description": "Bypasses the server opt-in requirement since clientcommands 2.15, restoring restricted commands (cfindblock, careastats, etc.) on servers that don't have clientcommands installed.",
 	"authors": [
 		"ZnianXgang"
 	],
 	"contact": {
 		"homepage": "https://github.com/ZnianXgang/clientcommands-server-bypass",
-		"sources": "https://github.com/ZnianXgang/clientcommands-server-bypass"
+		"sources": "https://github.com/ZnianXgang/clientcommands-server-bypass",
+		"issues": "https://github.com/ZnianXgang/clientcommands-server-bypass/issues"
 	},
+	"parent": "clientcommands",
 	"license": "CC0-1.0",
 	"icon": "assets/clientcommands-server-bypass/icon.png",
 	"environment": "client",
