@@ -12,7 +12,11 @@
 		"sources": "https://github.com/ZnianXgang/clientcommands-server-bypass",
 		"issues": "https://github.com/ZnianXgang/clientcommands-server-bypass/issues"
 	},
-	"parent": "clientcommands",
+	"custom": {
+		"modmenu": {
+			"parent": "clientcommands"
+		}
+	},
 	"license": "CC0-1.0",
 	"icon": "assets/clientcommands-server-bypass/icon.png",
 	"environment": "client",
