@@ -16,14 +16,11 @@
 	"environment": "client",
 	"entrypoints": {
 		"client": [
-			"net.cc.bypass.client.ClientcommandsServerBypassClient"
+			"net.cc.bypass.ClientcommandsServerBypass"
 		]
 	},
 	"mixins": [
-		{
-			"config": "clientcommands-server-bypass.client.mixins.json",
-			"environment": "client"
-		}
+		"clientcommands-server-bypass.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.19.3",

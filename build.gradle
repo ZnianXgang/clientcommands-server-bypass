@@ -22,12 +22,9 @@ repositories {
 }
 
 loom {
-	splitEnvironmentSourceSets()
-
 	mods {
 		"clientcommands-server-bypass" {
 			sourceSet sourceSets.main
-			sourceSet sourceSets.client
 		}
 	}
 }

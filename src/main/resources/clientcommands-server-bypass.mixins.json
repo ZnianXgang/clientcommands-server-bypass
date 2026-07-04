@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "net.cc.bypass.client.mixin",
+	"package": "net.cc.bypass.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"client": [
 		"ClientCommandsServerMixin"
