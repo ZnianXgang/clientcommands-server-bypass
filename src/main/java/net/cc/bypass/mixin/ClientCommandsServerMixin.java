@@ -6,12 +6,12 @@ import org.spongepowered.asm.mixin.Overwrite;
 
 /**
  * Makes {@link ClientCommandsServer#requirePrivileges()} a no-op,
- * bypassing the server opt-in requirement added in clientcommands 2.15.
+ * bypassing the server opt-in requirement added in Client Commands 2.15.
  *
  * <p>All restricted commands (cfindblock, careastats, csignsearch, cfind,
  * cglow entities, cgetdata entity, cghostblock) call this single method.
  * By preventing it from throwing, every command becomes usable without
- * the server having clientcommands installed.</p>
+ * the server having Client Commands installed.</p>
  */
 @Mixin(ClientCommandsServer.class)
 public class ClientCommandsServerMixin {

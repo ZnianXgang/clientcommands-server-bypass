@@ -3,7 +3,7 @@
 	"id": "clientcommands-server-bypass",
 	"version": "${version}",
 	"name": "Client Commands Server Bypass",
-	"description": "Bypasses the server opt-in requirement since clientcommands 2.15, restoring restricted commands (cfindblock, careastats, etc.) on servers that don't have clientcommands installed.",
+	"description": "Bypasses the server opt-in requirement since Client Commands 2.15, restoring restricted commands (cfindblock, careastats, etc.) on servers that don't have Client Commands installed.",
 	"authors": [
 		"ZnianXgang"
 	],

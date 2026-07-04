@@ -11,9 +11,9 @@ public class ClientcommandsServerBypass implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 		if (FabricLoader.getInstance().isModLoaded("clientcommands")) {
-			LOGGER.info("Bypass active — clientcommands server opt-in check neutralised");
+			LOGGER.info("Bypass active — Client Commands server opt-in check neutralised");
 		} else {
-			LOGGER.warn("clientcommands not found — bypass has no effect");
+			LOGGER.warn("Client Commands not found — bypass has no effect");
 		}
 	}
 }
