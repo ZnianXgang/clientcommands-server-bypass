@@ -1,4 +1,4 @@
-# Clientcommands Server Bypass
+# Client Commands Server Bypass
 
 Bypasses the server opt-in requirement introduced in clientcommands 2.15, allowing restricted commands to work on servers that don't have clientcommands installed.
 
@@ -28,4 +28,4 @@ No configuration, no commands, no server-side changes.
 ./gradlew build
 ```
 
-Output: `build/libs/clientcommands-server-bypass-1.0.0.jar`
+Output: `build/libs/clientcommands-server-bypass-1.0.jar`
