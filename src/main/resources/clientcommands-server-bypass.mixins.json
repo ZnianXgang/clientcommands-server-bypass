@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "net.cc.bypass.mixin",
+	"package": "me.znianxgang.ccbypass.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"client": [
 		"ClientCommandsMixin",

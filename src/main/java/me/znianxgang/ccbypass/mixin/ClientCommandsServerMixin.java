@@ -1,4 +1,4 @@
-package net.cc.bypass.mixin;
+package me.znianxgang.ccbypass.mixin;
 
 import net.earthcomputer.clientcommands.server.ClientCommandsServer;
 import org.spongepowered.asm.mixin.Mixin;

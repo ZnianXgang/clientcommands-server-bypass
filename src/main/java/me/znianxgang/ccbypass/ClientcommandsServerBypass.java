@@ -1,4 +1,4 @@
-package net.cc.bypass;
+package me.znianxgang.ccbypass;
 
 import net.fabricmc.api.ClientModInitializer;
 import org.slf4j.Logger;

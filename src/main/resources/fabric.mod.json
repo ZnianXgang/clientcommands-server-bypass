@@ -22,7 +22,7 @@
 	"environment": "client",
 	"entrypoints": {
 		"client": [
-			"net.cc.bypass.ClientcommandsServerBypass"
+			"me.znianxgang.ccbypass.ClientcommandsServerBypass"
 		]
 	},
 	"mixins": [
