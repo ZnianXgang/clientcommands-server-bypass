@@ -24,7 +24,7 @@ No configuration, no commands, no server-side changes.
 
 ## Requirements
 
-- Minecraft 26.2
+- Minecraft ≥26.2
 - Fabric Loader ≥0.19.3
 - Client Commands ≥2.15
 
