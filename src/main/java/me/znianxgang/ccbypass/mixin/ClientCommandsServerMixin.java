@@ -2,28 +2,27 @@ package me.znianxgang.ccbypass.mixin;
 
 import net.earthcomputer.clientcommands.server.ClientCommandsServer;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Overwrite;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 /**
- * Makes {@link ClientCommandsServer#requirePrivileges()} a no-op,
- * bypassing the server opt-in requirement added in Client Commands 2.15.
+ * Legacy target for the server opt-in check: Client Commands 2.15 through
+ * 2.16.3 keep {@code requirePrivileges()} in {@link ClientCommandsServer}.
  *
- * <p>All restricted commands (cfindblock, careastats, csignsearch, cfind,
- * cglow entities, cgetdata entity, cghostblock) call this single method.
- * By preventing it from throwing, every command becomes usable without
- * the server having Client Commands installed.</p>
+ * <p>As of 2.16.4 the method moved to
+ * {@code ClientCommandHelper} and this class no longer contains it. The
+ * injector is therefore optional ({@code require = 0}) instead of an
+ * {@code @Overwrite}, so the same jar keeps working on both branches instead of
+ * hard-crashing with a mixin apply failure when the method is gone.</p>
+ *
+ * <p>See {@link ClientCommandHelperMixin} for the current (2.16.4+) target.</p>
  */
 @Mixin(ClientCommandsServer.class)
 public class ClientCommandsServerMixin {
 
-	/**
-	 * @reason This is the only change needed to bypass <em>all</em> restricted
-	 * commands. An {@code @Inject(cancellable = true)} at HEAD would also work,
-	 * but {@code @Overwrite} makes the intent explicit: we want zero side effects
-	 * from this method, not merely early-return.
-	 */
-	@Overwrite
-	public static void requirePrivileges() {
-		// no-op — allow all commands regardless of server opt-in status
+	@Inject(method = "requirePrivileges", at = @At("HEAD"), cancellable = true, require = 0)
+	private static void clientcommandsServerBypass$skipOptInCheck(CallbackInfo ci) {
+		ci.cancel();
 	}
 }

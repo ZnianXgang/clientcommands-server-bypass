@@ -3,13 +3,11 @@
 	"package": "me.znianxgang.ccbypass.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"client": [
+		"ClientCommandHelperMixin",
 		"ClientCommandsMixin",
 		"ClientCommandsServerMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
-	},
-	"overwrites": {
-		"requireAnnotations": true
 	}
 }

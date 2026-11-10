@@ -3,7 +3,7 @@
 	"id": "clientcommands-server-bypass",
 	"version": "${version}",
 	"name": "Client Commands Server Bypass",
-	"description": "Bypasses the server opt-in requirement since Client Commands 2.15 and blocks the clientcommands:command_execution payload, restoring all restricted commands without server exposure.",
+	"description": "Bypasses the server opt-in requirement since Client Commands 2.15 and blocks the clientcommands:command_execution payload, restoring all restricted commands without server exposure. Works with both the 2.15-2.16.3 and the 2.16.4+ permission-check locations.",
 	"authors": [
 		"ZnianXgang"
 	],
@@ -29,7 +29,6 @@
 		"clientcommands-server-bypass.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.19.3",
 		"minecraft": ">=26.2",
 		"clientcommands": ">=2.15"
 	}

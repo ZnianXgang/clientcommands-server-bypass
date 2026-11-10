@@ -32,10 +32,17 @@ loom {
 dependencies {
 	// To change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	// Development environment only (compiling against ClientModInitializer and running runClient).
+	// The mod itself declares no loader dependency in fabric.mod.json: at runtime the loader version
+	// is whatever Client Commands requires.
 	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-	// Clientcommands — we mixin into it to bypass the server opt-in check
-	implementation "maven.modrinth:7Coz83fv:JNP7M5yW"
+	// Client Commands 2.16.4 (Modrinth version id PciJjRRE) — we mixin into it to bypass the server opt-in check
+	implementation "maven.modrinth:7Coz83fv:PciJjRRE"
+
+	// Client Commands requires Fabric API at runtime. It is not needed to build or ship this mod,
+	// but runClient cannot start without it.
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 }
 
 processResources {
